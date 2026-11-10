@@ -1,6 +1,8 @@
+
 import "./globals.css";
 import { ActiveSectionProvider } from "@/components/ActiveSectionContext";
 import ThemeProvider from "@/components/ThemeProvider";
+import { Analytics } from "@vercel/analytics/next";
 
 export const metadata = {
   title: "Tanish Patil",
@@ -20,6 +22,7 @@ export default function RootLayout({
             {children}
           </ActiveSectionProvider>
         </ThemeProvider>
+        <Analytics />
       </body>
     </html>
   );
